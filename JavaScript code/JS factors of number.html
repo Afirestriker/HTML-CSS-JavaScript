@@ -1,0 +1,67 @@
+
+<html>
+<head>
+	<title>Factors of number </title>
+
+	<script language="JavaScript">
+
+		function factors()
+		{
+			var num = 0;
+			var val;
+			var i=1;
+			var fact = " ";
+
+			val = document.getElementById("n1").value;
+
+			if(val.lenght == 0)
+				alert("Please enter value");
+			else if(isNaN(val))
+				alert("Please enter number between 0-9");
+			else
+			{
+				num = parseInt(val);
+				while(i <= num/2)
+				{
+					if(num % i == 0)
+						fact = fact + i + ",";	
+					i++;
+
+					document.getElementById("txtRes").value = fact;
+				}
+			}
+		}
+
+
+	</script>
+
+</head>
+
+<body>
+
+	<form>
+		<table>
+
+			<tr>
+				<th>Enter number: </th>
+				<td> <input type="text" name="number" id="n1"> </td>
+			</tr>
+
+
+			<tr>
+				<th>Result: </th>
+				<td> <input type="text" name="result" id="txtRes" disabled> </td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<input type="button" value="Factors" name="btfactors" id="factors_bt" onClick="factors()">
+				</td>
+			</tr>
+
+
+		</table>
+	</form>
+
+</body>
+</html>

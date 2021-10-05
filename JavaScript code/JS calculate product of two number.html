@@ -1,0 +1,88 @@
+
+<html>
+<head>
+	<title>Product of two number</title>
+
+		<script language="JavaScript">
+
+			//alert("Welcome");
+
+			//code 1
+			function test()
+			{
+				var num1 = 0;
+				var num2 = 0;
+				var n1 = document.getElementById("n1").value;
+				var n2 = document.getElementById("n2").value;
+
+				if(n1.length == 0 || n2.length == 0)
+				{	
+					alert("Please enter value in both field");
+				}
+				else
+				{
+				    if(isNaN(n1) || isNaN(n2))
+					{
+						alert("Only numeric value accepted");
+					}
+					else
+					{
+						num1 = parseInt(n1);
+						num2 = parseInt(n2);
+						alert("Product => " + num1*num2);
+					}
+				}
+			}
+
+			function check()
+			{
+				var num1 = document.getElementById("n1").value;
+				var num2 = document.getElementById("n2").value;
+
+				if(num1.length == 0 || num2.length == 0)
+				{	
+					alert("Please enter value in both field");
+				}
+				else
+				{
+				    if(isNaN(num1) || isNaN(num2))
+					{
+						alert("Only numeric value accepted");
+					}
+					else
+					{
+
+						alert("Product => " + parseInt(num1)*parseInt(num2));
+					}
+				}
+			}
+		</script>
+
+</head>
+
+
+<body>
+
+	<form name="f1" action="" method="post">
+		<table>
+			<!-- row 1 -->
+			<tr>
+				<th>Number 1: </th>
+				<td> <input type="text" name="Number1" id="n1">* </td>
+			</tr>
+
+			<!-- row 2 -->
+			<tr>
+				<th>Number 2: </th>
+				<td> <input type="text" name="Number2" id="n2">* </td>
+			</tr>
+
+			<tr>
+				<th colspan="2"> <input type="button" name="calc" id="calc_product" value="calculate" onClick="check()"></th>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+<html>
+<head>
+	<title>JS script demonstration</title>
+
+	<script>
+
+		//window.alert("Hello");	//window level event
+
+		
+		function loaded()
+		{
+			alert("Welcome these is onload event");
+		}
+
+		function unloaded()
+		{
+			alert("Are you sure");
+		}
+
+		function chngcolor()			// user-defined event handler
+		{
+			document.getElementById("hd1").style.color ="red";
+		}
+
+		function bckoriginal()
+		{
+			document.getElementById("hd1").style.color = "black";
+		}
+
+		function display()
+		{
+			document.getElementById("para").innerHTML = "Surprised";
+		}
+
+		function change()
+		{
+			alert("changed recorded");
+		}
+
+	</script>
+
+</head>
+
+<body onload="loaded()" onunload="unloaded()">
+
+
+	<h1 id="hd1" onmouseover="chngcolor()" onmouseout="bckoriginal()">Hover over me</h1>
+
+	<p id="para"> </p>
+
+	<button onClick="display()">Click me</button> <br><br>
+
+	Modify me: <input type="text" placeholder="Enter name" onChange="change()">
+
+
+</body>
+</html>

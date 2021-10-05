@@ -1,0 +1,87 @@
+
+<html>
+<head>
+	<title> JS Array methods </title>
+</head>
+
+<body>
+	<p id="p1"> 	</p>	
+</body>
+
+<script language="JavaScript">
+
+	var arr = [4, 6, 8 ,2];
+	var text = "Array list: ";
+	var len = "Length of array: " + arr.length;
+	var push = "Array after push() method: ";
+	var pop = "Array after pop() method: ";
+	var sort = "Array after sort() method (in asc order): ";
+	var shift = "Array after shit() method: ";
+	var unshift = "Array after unshit() method: ";
+	var del = "After performing delete arr[1]: "
+	var splice = "Splice update arr.splice(1, 2, 14, 18): ";
+	var slice = "Slice update arr.slice(2, 4): ";
+	var concat = "Concat arr and arr1: ";
+
+	for(var i =0; i<arr.length; i++)
+		text = text + arr[i] + ", ";
+	document.getElementById("p1").innerHTML = text; 
+
+	//arr.length
+	document.getElementById("p1").innerHTML = text + "<br><br>" + len;
+
+	//arr.push(ele1, ele2, eleN), enter one element at end of list
+	arr.push(18);
+	for(var i =0; i<arr.length; i++)
+		push = push + arr[i] + ", ";
+	document.getElementById("p1").innerHTML = text + "<br><br>" + len + "<br><br>" + push;
+
+	//arr.pop(), delete one element from end
+	arr.pop();
+	for(var i =0; i<arr.length; i++)
+		pop = pop + arr[i] + ", ";
+	document.getElementById("p1").innerHTML = text + "<br><br>" + len + "<br><br>" + push + "<br><br>" + pop;
+
+	//sort(compare function), //arrange array in ascending or descending order
+	arr.sort(function(a, b) {return a-b}); //sort array in ascending order;
+	for(var i =0; i<arr.length; i++)
+		sort = sort + arr[i] + ", ";
+	document.getElementById("p1").innerHTML = text + "<br><br>" + len + "<br><br>" + push + "<br><br>" + pop + "<br><br>" + sort;
+
+	//arr.shit(), //delete index 0th element and shit index 1st and other element to left
+	arr.shift();
+	for(var i =0; i<arr.length; i++)
+		shift = shift + arr[i] + ", ";
+	document.getElementById("p1").innerHTML = text + "<br><br>" + len + "<br><br>" + push + "<br><br>" + pop + "<br><br>" + sort + "<br><br>" + shift;
+
+	//arr.unshift(ele1, ele2, eleN), //add element at index 0th and shift other element toward right
+	arr.unshift(16);
+	for(var i =0; i<arr.length; i++)
+		unshift = unshift + arr[i] + ", ";
+	document.getElementById("p1").innerHTML = text + "<br><br>" + len + "<br><br>" + push + "<br><br>" + pop + "<br><br>" + sort + "<br><br>" + shift + "<br><br>" + unshift;
+
+	//delete <arrName>[index]; //delete the elment of specify index position
+	//here length remain same 	
+	delete arr[1];
+	for(var i =0; i<arr.length; i++)
+		del = del + arr[i] + ", ";
+	document.getElementById("p1").innerHTML = text + "<br><br>" + len + "<br><br>" + push + "<br><br>" + pop + "<br><br>" + sort + "<br><br>" + shift + "<br><br>" + unshift + "<br><br>" + del;
+
+	//splice(start_index, no.of element to be removed, element to be inserted); //insert ele in between array
+	arr.splice(1, 2, 14, 18);
+	for(var i =0; i<arr.length; i++)
+		splice = splice + arr[i] + ", ";
+	document.getElementById("p1").innerHTML = text + "<br><br>" + len + "<br><br>" + push + "<br><br>" + pop + "<br><br>" + sort + "<br><br>" + shift + "<br><br>" + unshift + "<br><br>" + del + "<br><br>" + splice;
+
+	//slice(startIndex, endNo.inlength);
+	var arr1 = arr.slice(2, 4);		//here 4 is not index vlaue, but its count of array list 1, 2,..
+	for(var i =0; i<arr1.length; i++)
+		slice = slice + arr1[i] + ", ";
+	document.getElementById("p1").innerHTML = text + "<br><br>" + len + "<br><br>" + push + "<br><br>" + pop + "<br><br>" + sort + "<br><br>" + shift + "<br><br>" + unshift + "<br><br>" + del + "<br><br>" + splice + "<br><br>" + slice;
+	
+	//concat ==> var Resultant_Array = <arr1Name>.concat(<arr2Name>); //output = "arr1Element" + "arr2Element";
+	var concat = concat + ": " + arr.concat(arr1);
+	document.getElementById("p1").innerHTML = text + "<br><br>" + len + "<br><br>" + push + "<br><br>" + pop + "<br><br>" + sort + "<br><br>" + shift + "<br><br>" + unshift + "<br><br>" + del + "<br><br>" + splice + "<br><br>" + slice + "<br><br>" + concat;
+
+</script>
+</html>

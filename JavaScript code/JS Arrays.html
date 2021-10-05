@@ -1,0 +1,44 @@
+
+<html>
+<head>
+	<title>Arrays in JS</title>
+</head>
+
+<body>
+
+	<p id="res">	</p>
+
+</body>
+
+	<script language="JavaScript">
+
+		var arr = [1, 2, 3, 4];
+		var msg = "Array elements: ";
+		var min = arr[0];
+		var max= arr[0];
+		var minpos=0, maxpos=0;
+
+		for(var i=0; i<arr.length; i++)
+		{
+			msg = msg + arr[i] + ", ";
+
+			if(min > arr[i])
+			{
+				min = arr[i];
+				minpos = i+1;
+			}
+
+			if(max < arr[i])
+			{
+				max = arr[i];
+				maxpos = i+1;
+			}
+		}
+
+		msg = msg + "<br>" + "Min value: " + min + " At pos: " + minpos + "<br>" + "Max value: " + max + " At pos: " + maxpos;
+
+		document.getElementById("res").innerHTML = msg;
+
+	</script>
+
+</html>

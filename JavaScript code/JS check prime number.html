@@ -1,0 +1,68 @@
+
+<html>
+<head>
+	<title>Prime number check</title>
+
+	<script language="JavaScript">
+
+		function prime_check()
+		{
+			var num = 0;
+			var val;
+			var i=2;
+			var str = " ";
+
+			val = document.getElementById("txtn1").value;
+
+			if(val.length == 0)
+				alert("Please enter any number");
+			else if(isNaN(val))
+				alert("Please enter only numeric value");
+			else
+			{
+				num = parseInt(val);
+
+				while( i <= num/2 )
+				{
+					if(num % i == 0)
+					{
+						document.getElementById("txtRes").value = str + "No, not a Prime Number";
+						break;
+					}
+					else
+						i++;
+				}
+				if(i > num/2)
+					document.getElementById("txtRes").value = str + "Yes, Its Prime Nubmer";
+			}
+
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<form>
+		<table>
+
+			<tr>
+				<th>Enter number: </th>
+				<td> <input type="text" name="number" id="txtn1"> </td>
+			</tr>
+
+			<tr>
+				<th>Result: </th>
+				<td> <input type="text" name="number" id="txtRes" disabled> </td>
+			</tr>
+
+			<tr>
+				<td colspan="2"> <input type="button" name="bt" id="bt" value="Check prime or not" onClick="prime_check()" ></td>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>

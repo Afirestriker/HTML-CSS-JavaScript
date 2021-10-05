@@ -1,0 +1,50 @@
+
+<html>
+<head>
+	<title>Even or Odd check</title>
+
+	<script language="JavaScript">
+
+		function check()
+		{
+			var num1 = 0;
+			var val;
+
+			val = document.getElementById("n1").value;
+
+			if(val.length == 0)
+				alert("Please eneter number");
+			else if(isNaN(val))
+				alert("Please enter 0-9 value only");
+			else
+			{
+				num1 = parseInt(val);
+				if(num1 % 2 == 0)
+					alert("Number is even");
+				else
+					alert("Number id odd");
+			}
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<form>
+		<table>
+
+			<tr>
+				<th>Number 1: </th>
+				<td> <input type="text" id="n1" name="number1"> </td>
+			</tr>
+
+			<tr>
+				<td colspan="2"> <button onClick="check()">Check</button>
+
+		</table>
+	</form>
+
+</body>
+</html>

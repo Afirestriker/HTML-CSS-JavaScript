@@ -1,0 +1,59 @@
+
+<html>
+<head>
+	<title>Factorial of number</title>
+
+	<script language="JavaScript">
+
+		function check()
+		{
+			var num1 = 0;
+			var val;
+			var fact = 1;
+
+			val = document.getElementById("n1").value;
+
+			if(val.length == 0)
+				alert("Please eneter number");
+			else if(isNaN(val))
+				alert("Please enter 0-9 value only");
+			else
+			{
+				num1 = parseInt(val);
+				while(num1 > 1)
+				{
+
+					fact = fact * num1;	
+					num1--;
+				}
+				document.getElementById("txtRes").value = fact + "";
+			}
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<form>
+		<table>
+
+			<tr>
+				<th>Number 1: </th>
+				<td> <input type="text" id="n1" name="number1"> </td>
+			</tr>
+
+			<tr>
+				<th>Result: </th>
+				<td> <input type="text" id="txtRes" name="Result" disabled> </td>
+			</tr>
+
+			<tr>
+				<td colspan="2"> <input type="button" id="bt1" value="Factorial" onClick="check()"> </td>
+
+		</table>
+	</form>
+
+</body>
+</html>

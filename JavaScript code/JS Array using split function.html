@@ -1,0 +1,46 @@
+
+<html>
+<head>
+	<title>JS Array using split() function</title>
+
+	<script language="JavaScript">
+
+		function func()
+		{
+			var msg = document.getElementById("t1").value;
+
+			var arr = msg.split(",");
+
+
+			for(var i=0; i<arr.length; i++)
+				alert(arr[i]);
+
+			arr.sort();
+			for(var i=0; i<arr.length; i++)
+				alert(arr[i]);
+
+		}
+
+	</script>
+</head>
+
+
+<body>
+
+	<form action="" method="post" name="f1">
+		<table>
+
+			<tr>
+				<th>Enter number:</th>
+				<td> <input type="text" id="t1"> (separated by ",") </td>
+			</tr>
+
+			<tr>
+				<td colspan="2"> <input type="button" value="Submit" onclick="func()"> </td>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>

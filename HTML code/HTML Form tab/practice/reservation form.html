@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reservation form</title>
+
+	<style>
+
+		input[name=CityName]
+		{
+			background-color: grey;
+			width: 80px;
+			border-style: solid;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<form action="" method="post" target="_blank">
+		
+	<!-- Full name -->
+		<label>Full name*:</label><br>
+		<input type="text" name="FullName" placeholder="FirstName LastName" autofocus required><br>
+
+	<!-- E-mail address -->
+		<label>Email address*:</label><br>
+		<input type="email" name="Email-id" placeholder="EMAIL_ADDRESS" required><br>
+
+	<!-- Select package -->
+		<label>Select Tour Package*:</label><br>
+		<input list="City" name="CityName" value="Goa" required>
+			<datalist id="City">
+				<option >Goa</option>
+				<option>Mumbai</option>
+				<option>Bhopal</option>
+			</datalist><br>
+
+
+	<!-- Arrival date -->
+		<label>Arrival data*:</label><br>
+		<input type="date" name="Date" required><br>
+
+	<!-- No. of persons -->
+		<label>Number of persons*:</label><br>
+		<input type="number" name="no.ofPerson" placeholder="UNKNOWN_TYPE" min="1" max="6" style="width: 140px" required><br>
+
+	<!-- checkboxes -->
+		<label>What would you want to avail?*</label><br>
+		Boarding <input type="checkbox" name="Boarding"><br>
+		Fooding <input type="checkbox" name="Fooding"><br>
+		Sight seeing <input type="checkbox" name="Sight seeing"><br>
+
+	<!-- coupon code -->
+		Discount Coupon code:<br>
+		<input type="text" name="code" placeholder="UNKNOWN_TYPE"><br>
+
+	<!-- Terms and conditions -->
+		Terms and condition*<br>
+		<input type="radio" name="agree_notagree" checked>I agree
+		<input type="radio" name="agree_notagree">I disagree <br>
+
+	<!-- submit button -->
+		<button type="submit" name="Complete_reservation">Complete reservation</button>
+		
+	</form>
+
+</body>
+</html>

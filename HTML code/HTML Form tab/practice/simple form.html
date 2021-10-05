@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A simple form</title>
+
+
+	<style>
+
+		b
+		{
+			color: #222573;
+		}
+
+		i
+		{
+			font-weight: bold;
+			color: #999ce8;
+		}
+
+		fieldset
+		{
+			padding-bottom: 20px;
+			width: 850px;
+		}
+
+		label
+		{
+			padding-left: 50px;
+		}
+
+		/* Fieldset Customer info */
+		input[name=name], input[type=tel], input[type=email]
+		{
+			width: 430px;
+		}
+
+		/* Fieldset Books */
+		input[name=BookName]
+		{
+			margin-left: 50px;
+			width: 400px;
+		}
+
+		input[type=number]
+		{
+			width: 160px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<b>A Simple Form</b><br>
+	<i>Form Fundamentals</i>
+
+	<form action="" method="post" name="simpleform" target="_blank">
+
+		<fieldset>
+			<!-- Customer name -->
+			<legend>Customer Info</legend>
+			<label>Name:</label>
+			<input type="text" name="name" placeholder="Enter your name" required><br><br>
+
+
+			<!-- Telephone -->
+			<label>Telephone</label>
+			<input type="tel" name="telephone" minlength="13" placeholder="Pattern 1-234-567-8910" required><br><br>
+
+			<!-- Email address -->
+			<label>Email Address</label>
+			<input type="email" name="emailid" placeholder="Enter your email address"><br>
+		</fieldset>
+
+		<fieldset>
+			<legend>Books</legend>
+
+			<!-- Book title -->
+			<input type="text" name="BookName" required>
+
+			<!-- book quantity -->
+			<label style="padding-left: initial;">Quantity (Maximum 5):</label>
+			<input type="number" name="quantity" min="1" max="5" required><br>
+		</fieldset>
+
+		<!-- Submit button -->
+		<button type="submit" name="submitBt">Submit</button>
+	</form>
+
+</body>
+</html>

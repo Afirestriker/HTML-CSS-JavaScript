@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form basic</title>
+
+
+	<style>
+		
+
+	</style>
+
+</head>
+<body>
+
+	<table>
+		<form name="form" action="Action_page.html" method="get">
+		<tr>
+			<th>Email ID:</th>
+			<td><input type="text" name="TXTid"></td>
+		</tr>
+
+		<tr>
+			<th>Password:</th>
+			<td><input type="Password" name="TXTPass"></td>
+		</tr>
+
+		<tr>
+			<th>Gender:</th>
+			<td>
+				<input type="radio" name="Gender" value="Male" checked>Male
+				<input type="radio" name="Gender" value="Female">Female
+				<input type="radio" name="Gender" value="Other">Other
+			</td>
+		</tr>
+
+		<tr>
+			<th>Hobby:</th>
+			<td>
+				<input type="checkbox" name="Dancing" value="Dancing" >Dancing
+				<input type="checkbox" name="Singing" value="Singing">Singing
+				<input type="checkbox" name="Gardening" value="Gardening">Gardening
+			</td>
+		</tr>
+
+		<tr>
+			<th>state:</th>
+			<td>
+				<select name="State">
+					<option>Maharashtra</option>
+					<option>MP</option>
+					<option>Gujarat</option>
+					<option>UP</option>
+				</select>
+			</td>
+		</tr>
+
+		<tr>
+			<th>Details:</th>
+			<td><textarea rows="6" cols="40"> </textarea></td>
+		</tr>
+
+		<tr>
+			<th></th>
+			<th align="left"><input type="submit" name="Butt_submit"></th>
+			<th align="left"><input type="Reset" name="Butt_reset"></th>
+		</tr>
+
+		</form>
+	</table>
+
+		<fieldset>
+			<legend>Section one</legend>
+			<form>
+			<div>Name:</div>
+				<div><input type="text" name="nameone" placeholder="enter name" disabled></div>
+			<div>Datalist:</div>
+			<div><input list="listone" name="listitem"></div>
+				<datalist id="listone">
+					<option>Option1</option>
+					<option>option 2</option>
+				</datalist>
+
+			Color:<input type="color" name="colorpic"> <br>
+			<input type="submit" name="sumitbt"> <br>
+
+			number: <input type="number" name="num" min="2" max="4">
+		</form>
+
+<a href="goole.com"> click here</a>
+
+</body>
+</html>

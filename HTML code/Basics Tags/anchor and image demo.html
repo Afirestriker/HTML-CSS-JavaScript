@@ -1,0 +1,45 @@
+
+<!--
+	File content:
+		Anchor tag
+				Relative Addressing
+				Absolute Addressing
+		Image tag
+				using imagage as an link
+				Giving border to imgage
+				using image as an page background using background attribute inside body tag
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anchor and image demo</title>
+</head>
+<body background=".\images\background.jpg">
+	<h1>Anchor Tag demo</h1><hr>
+		<a href="http://www.google.com">Click here</a>
+
+	<!-- Relative Addressing: File is in same folder, so no need to specified absolute path for the file-->
+	<h3>Relative Addressing</h3>
+		<a href="img_tag.html">Img Tag file</a>
+
+	<!-- Absolute Addresing: Need to specify absolute path for the file -->
+	<h3>Absolute Addressing</h3>
+		<a href="..\html page.html">Absoulute addressing</a>
+
+	<!----------------------------------------------------->
+	<hr>
+	<h1>Image tag demo</h1>
+	<h4>This is sample image file</h4>
+		<img src=".\images\sample.jpg" alt="Image unable to open">
+	
+	<h4>Imgage as hyperlink with border attribute</h4>
+		<a href="temp.html">
+			<img src=".\images\sample.jpg" alt="sample.jpg image" border=8>
+		</a>
+
+	<h4>Example for <strong>alt</strong> attribute in img tag</h4>
+		<img src=".\images\sample1.jpg" alt="Image unable to open">
+
+</body>
+</html>

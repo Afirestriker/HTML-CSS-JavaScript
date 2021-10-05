@@ -1,0 +1,217 @@
+
+<!-- Name: Ashish Agrawal
+	 PRN:  1052190598	Roll no: 49
+	 Cource: Web Development using HTML5 and CSS
+	 Subject: Assignment 04 CSS and Forms (form 2)
+	 Date: 02 / 01 / 2021
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Student Registration form </title>
+
+	<style>
+
+		body
+		{
+			background-image: url("./img/SRF_bg.jpg");
+			background-color: rgb(80, 227, 64);		/*in case if image not loaded*/
+			border: 8px solid white ;
+			margin: initial;
+			font-family: sans-serif;
+		}
+
+		h2.heading
+		{
+			text-align: center;
+		}
+
+		hr.head
+		{
+			border: 1px solid white;
+		}
+
+		th.fieldname
+		{
+			text-align: left;
+		}	
+
+		td
+		{
+			padding-bottom: 12px;
+		}
+
+		.fieldvalue, input[name=phone1]
+		{
+			width: 94%;
+			padding: 10px;
+			background-color: #e2e6e1;
+			border-color: #e2e6e1;
+			border-width: 0px;
+		}
+		.fieldvalue:Hover   /*hover effect*/
+		{
+			background-color: #d5d6d4;
+		}
+
+
+		.fieldvalue_course
+		{
+			padding: 2px;
+		}
+		.fieldvalue_course:hover  /*hover effect*/
+		{
+			border: 1px solid black ;
+		}
+
+		.courseFieldName
+		{
+			width: 40px;
+			vertical-align: initial;
+		}
+
+		button[name=register]
+		{
+			width: 100%;
+			padding: 10px;
+			color: white;
+			background-color: #23850c;
+			border-color: #23850c;
+			border-style: solid;
+		}
+
+		/* Hover effects */
+		button[name=register]:hover
+		{
+			background-color: #1c7008;
+			border-color: #1c7008;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<form name="SRF1" action="home_page.html" method="post" target="_blank">
+		<table align=center name="SRF">
+			<tr>
+				<th colspan="2">
+					<h2 class="heading">Student Registration Form</h2>
+				</th>
+			</tr>
+			
+			<tr>
+				<td colspan="2"><hr class="head"></td>
+			</tr>
+
+			<!-- First Name -->
+			<tr>
+				<th colspan="2" class="fieldname">Firstname:</th>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="text" name="Fname" placeholder="Firstname" autofocus required class="fieldvalue"></td>
+			</tr>
+
+
+			<!-- Middle Name -->
+			<tr>
+				<th colspan="2" class="fieldname">Middlename:</th>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="text" name="Mname" placeholder="Middlename" required class="fieldvalue"></td>
+			</tr>
+
+
+			<!-- Last Name -->
+			<tr>
+				<th colspan="2" class="fieldname">Lastname:</th>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="text" name="Lname" placeholder="Lastname" required class="fieldvalue"></td>
+			</tr>
+
+			<!-- Course select -->
+			<tr>		
+				<th class="courseFieldName fieldname">Course:</th>
+				<td>
+						<select name="course" class="fieldvalue_course">
+							<option value="course">course</option>
+							<optgroup label="UG">
+								<option value="BBA">BBA</option>
+								<option value="BBA(CA)">BBA(CA)</option>
+								<option value="BBA(IB)">BBA(IB)</option>
+								<option value="BBA(GeB)">BBA(GeB)</option>
+							</optgroup>
+						</select>
+				</td>
+			</tr>
+
+			<!-- Gender radio button -->
+			<tr>
+				<th colspan="2" class="fieldname">Gender:</th>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="radio" name="Gender" checked>Male
+					<input type="radio" name="Gender">Female
+					<input type="radio" name="Gender">Other
+				</td>
+			</tr>
+
+			<!-- Phone number -->
+			<tr>
+				<th colspan="2" class="fieldname">Phone:</th>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="text" name="phone1" value="+91" disabled></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="tel" name="phone2" placeholder="phone no" minlength="12" maxlength="15" required class="fieldvalue"></td>
+			</tr>
+
+			<!-- Current Address -->
+			<tr>
+				<th colspan="2" class="fieldname">Current Address:</th>
+			</tr>
+			<tr>
+				<td colspan="2"><textarea rows="6" cols="40" name="Current_Address" placeholder="Current Address" class="fieldvalue"></textarea></td>
+			</tr>
+
+
+			<!-- Email id -->
+			<tr>
+				<th colspan="2" class="fieldname">Email:</th>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="email" name="email" placeholder="Enter Email" required class="fieldvalue"></td>
+			</tr>
+
+			<!-- Password -->
+			<tr>
+				<th colspan="2" class="fieldname">Password:</th>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="password" name="password" placeholder="Enter Password" required class="fieldvalue"></td>
+			</tr>
+
+			<!-- Re-type password -->
+			<tr>
+				<th colspan="2" class="fieldname">Re-type Password:</th>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="password" name="Retype password" placeholder="Retype Password" required class="fieldvalue"></td>
+			</tr>
+
+			<!-- Register/submit button -->
+			<tr>
+				<td colspan="2"><button type="submit" name="register">Register</button></td>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>

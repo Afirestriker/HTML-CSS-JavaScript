@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image mapping</title>
+</head>
+<body>
+
+	<img src="./img/HTML, CSS, JS.jpg" alt="HTML, CSS, JS image" usemap="#map1">
+
+
+	<map name="map1">	<!-- Map is the tag used for creating section inside image which are clickable section which target different web pages/ doc/ etc...-->
+		<!--co-ordinate are in pixel (px) always in term of x,y
+			For circle = center co-ordinate, radius length in px
+			For rect = top left co-ordinate, bottom right co-ordinate
+			For poly = each size co-ordinate interm of x,y-->
+		<area shape="circle" coords="95, 75, 28" href="https://www.google.com" target=_blank>
+		<area shape="poly" coords="167, 68, 191, 127, 143, 124" href="https://www.google.com" target=_blank>
+		<area shape="rect" coords="211, 49, 264, 102" href="https://www.google.com" target=_blank>
+	</map>
+
+
+</body>
+</html>

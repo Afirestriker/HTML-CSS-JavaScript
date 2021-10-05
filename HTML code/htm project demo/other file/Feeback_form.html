@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedbak form</title>
+</head>
+<body>
+
+	<table>
+		
+		<form name="Feedbak_Form" action="" method="post">
+			
+			<!-- Name -->
+			<tr>
+				<th>Name:</th>
+				<td><input type="text" name="name" value="Enter name"></td>	
+			</tr>
+			
+			<!-- Email -->
+			<tr>
+				<th>Email:</th>
+				<td><input type="text" name="EmailID" value="Enter MailID"></td>
+			</tr>
+
+			<!-- Dis you get what you want-->
+			<tr>
+				<th>Did you get what you want:</th>
+				<td>
+					<input type="radio" name="response" value="Yes" checked>Yes
+					<input type="radio" name="response" value="Partially">Partially
+					<input type="radio" name="response" value="No">No
+				</td>
+			</tr>
+
+			<!-- Comment -->
+			<tr>
+				<th>Any Comment: </th>
+				<td>
+					<textarea rows="6" cols="40" name="CommentBox" placeholder="Enter Comment here..."></textarea> 
+				</td>
+			</tr>
+
+			<!-- Submit button-->
+			<tr>
+				<td colspan="2"><input type="button" name="submitButton" value="Submit"></td>
+			</tr>
+
+		</form>
+
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Billing Address</title>
+
+	<style>
+
+		.field
+		{
+			width: 30%;
+		}
+
+		.hover:hover
+		{
+			background-color: #f542f5;
+			border-color: black;
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+	<fieldset class="field">
+		<legend>Billing Address</legend>
+
+		<div>Address</div>
+		<input type="text" name="Add" placeholder="Enter your Address">
+
+		<div>City</div>
+		<input type="text" name="city" placeholder="Enter your City">
+
+		<div>Province</div>
+		<input type="text" name="Province" placeholder="Enter your Province">
+
+		<div>Postal Code</div>
+		<input type="text" name="Postal_code" placeholder="Enter your Postal Code" class="hover">
+
+		<div>State</div>
+		<select>
+			<optgroup label="USA">
+				<option>Alabama</option>
+				<option>Alaska</option>
+				<option>Arizona</option>
+			</optgroup>
+
+			<optgroup label="Canada">
+				<option>Alberta</option>
+				<option>British Columbia</option>
+				<option>Manitoba</option>
+			</optgroup>
+		</select>
+				
+			</datalist>
+
+	</fieldset>
+
+</body>
+</html>

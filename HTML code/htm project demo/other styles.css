@@ -1,0 +1,31 @@
+
+.center .buttons
+{
+	margin: 35px 280px;
+}
+
+.buttons button
+{
+	height: 50px;
+	width: 150px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ffb3b3;
+	background: red;
+	border: 1px solid #cc0000;
+	outline: none;
+	cursor: pointer;
+	border-radius: 25px;
+	transition: 0.5s;
+}
+
+.buttons .submitButton
+{
+	margin-left: 25px;
+}
+
+.buttons button:hover
+{
+	background: #cc0000;
+
+}
